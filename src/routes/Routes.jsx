@@ -13,7 +13,7 @@ import RegisterFarmer from './../pages/RegisterFarmer/Index';
 import FarmerBankAccount from './../pages/FarmerBankAccount/Index';
 import VichelsFarmers from './../pages/VichelsFarmers/Index';
 import DefaultLayout from '../layout/DefaultLayout';
-import AdddFarmers from '../pages/AddFarmers';
+import AdddFarmers from '../pages/AddFarmers/index.jsx';
 import FarmerSchedules from './../pages/SheduleFarmers';
 import Protected from './ProtectedRoute';
 import AuthProtected from './AuthProtectedRoute';
