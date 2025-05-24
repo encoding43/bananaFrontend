@@ -15,7 +15,7 @@ import { withPageGuard } from '../../utils/withPageGuard';
 import moment from 'moment';
 import WhatsAppComponent from '../../components/whatsApp/WhatsAppComponent';
 import AddPaymentModal from './AddPayment';
-import AddReceivingPaymentModal from './receivingPayment';
+import AddReceivingPaymentModal from './ReceivingPayment';
 import { useSelector } from 'react-redux';
 import { useCheckPermission } from '../../utils/useCheckPermission';
 
@@ -345,28 +345,35 @@ const CompanyBill = () => {
           );
         },
       },
-     
 
-      ...(checkNotificationPermission ?  [
-        {
-          header: 'Notification',
-          size: 150,
-          enableColumnActions: false,
-          enableSorting: false,
-          Cell: ({ row }) =>
-            row?.original?.scheduleDate ? (
-              <WhatsAppComponent
-                phoneNumber={row?.original?.companyMobile}
-                message={`Dear%20${row?.original?.companyName},%0A%0AI%20hope%20you%20are%20doing%20well.%0A%0AThis%20is%20a%20gentle%20reminder%20regarding%20the%20pending%20payments%20scheduled%20as%20per%20our%20agreed%20dates.%20Below%20are%20the%20details:%0A%0A%20Due%20Date:%20${moment(row?.original?.scheduleDate).format('DD-MM-YYYY')}%0A%20Amount:%20${row?.original?.scheduleAmount}%0A%0ATotal%20Due%20Amount:%20${row?.original?.amountDue}%0A%0APlease%20ensure%20the%20payments%20are%20made%20as%20per%20the%20agreed%20schedule.%20If%20you%20have%20already%20made%20any%20payments,%20kindly%20disregard%20this%20reminder%20for%20those%20specific%20amounts.%0A%0AFor%20any%20queries,%20feel%20free%20to%20reach%20out%20to%20us.%0A%0AThank%20you%20for%20your%20prompt%20attention.%0A%0ABest%20regards,%0A${user?.data?.ownerName}%0A${user?.data?.companyName}%0A${user?.data?.ownerMobile}`}
-              />
-            ) : (
-              ''
-            ),
-        },
-      ]:[]),
-
+      ...(checkNotificationPermission
+        ? [
+            {
+              header: 'Notification',
+              size: 150,
+              enableColumnActions: false,
+              enableSorting: false,
+              Cell: ({ row }) =>
+                row?.original?.scheduleDate ? (
+                  <WhatsAppComponent
+                    phoneNumber={row?.original?.companyMobile}
+                    message={`Dear%20${row?.original?.companyName},%0A%0AI%20hope%20you%20are%20doing%20well.%0A%0AThis%20is%20a%20gentle%20reminder%20regarding%20the%20pending%20payments%20scheduled%20as%20per%20our%20agreed%20dates.%20Below%20are%20the%20details:%0A%0A%20Due%20Date:%20${moment(row?.original?.scheduleDate).format('DD-MM-YYYY')}%0A%20Amount:%20${row?.original?.scheduleAmount}%0A%0ATotal%20Due%20Amount:%20${row?.original?.amountDue}%0A%0APlease%20ensure%20the%20payments%20are%20made%20as%20per%20the%20agreed%20schedule.%20If%20you%20have%20already%20made%20any%20payments,%20kindly%20disregard%20this%20reminder%20for%20those%20specific%20amounts.%0A%0AFor%20any%20queries,%20feel%20free%20to%20reach%20out%20to%20us.%0A%0AThank%20you%20for%20your%20prompt%20attention.%0A%0ABest%20regards,%0A${user?.data?.ownerName}%0A${user?.data?.companyName}%0A${user?.data?.ownerMobile}`}
+                  />
+                ) : (
+                  ''
+                ),
+            },
+          ]
+        : []),
     ],
-    [pageState.pageIndex, activeInputs, inputValues , checkAddReceivedPaymentPermission,checkPaymentReminderPermission,checkNotificationPermission],
+    [
+      pageState.pageIndex,
+      activeInputs,
+      inputValues,
+      checkAddReceivedPaymentPermission,
+      checkPaymentReminderPermission,
+      checkNotificationPermission,
+    ],
   );
 
   const handlePartyClick = (party) => {
