@@ -20,7 +20,7 @@ import AuthProtected from './AuthProtectedRoute';
 import CompanyBil from '../pages/CompanyBill/index';
 import FarmerBill from '../pages/FamerBill/index';
 import LabourBill from '../pages/LabourBill/index';
-import Company from '../pages/company';
+import Company from '../pages/Company';
 import PackingMaterial from '../pages/packingMaterial/PackingMaterial';
 import EmptyBox from '../pages/emptyBoxes/index';
 import InventColdStorage from '../pages/inventoryColdStorage/index';
