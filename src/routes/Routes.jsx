@@ -13,7 +13,7 @@ import RegisterFarmer from './../pages/RegisterFarmer/Index';
 import FarmerBankAccount from './../pages/FarmerBankAccount/Index';
 import VichelsFarmers from './../pages/VichelsFarmers/Index';
 import DefaultLayout from '../layout/DefaultLayout';
-import AddFarmers from '../pages/AddFarmers';
+import AdddFarmers from '../pages/AddFarmers';
 import FarmerSchedules from './../pages/SheduleFarmers';
 import Protected from './ProtectedRoute';
 import AuthProtected from './AuthProtectedRoute';
@@ -66,7 +66,7 @@ const RoutesComponent = () => {
     { path: ROUTES_CONST.USER, component: NewUserListTable },
     { path: ROUTES_CONST.ADD_USER, component: AddUserForm },
     { path: `${ROUTES_CONST.EDIT_USER}/:userId`, component: AddUserForm },
-    { path: ROUTES_CONST.ADD_FARMER, component: AddFarmers },
+    { path: ROUTES_CONST.ADD_FARMER, component: AdddFarmers },
     { path: ROUTES_CONST.FARMER_SCHEDULES, component: FarmerSchedules },
     { path: ROUTES_CONST.COMPANY_BILL, component: CompanyBil },
     { path: ROUTES_CONST.COMPANY, component: Company },

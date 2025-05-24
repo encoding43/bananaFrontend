@@ -22,7 +22,7 @@ import { useCheckPermission } from '../../utils/useCheckPermission';
 import ViewMap from '../../components/viewMap/ViewMap';
 import ExportButtonContent from '../../utils/ExportButtonContent';
 
-const AddFarmers = () => {
+const AdddFarmers = () => {
   const navigate = useNavigate();
   const [openAddModal, setOpenAddModal] = React.useState(false);
   const [farmerdata, setFarmerData] = React.useState([]);
@@ -349,4 +349,4 @@ const AddFarmers = () => {
   );
 };
 
-export default withPageGuard(AddFarmers, 'Add New Farmer', 'List');
+export default withPageGuard(AdddFarmers, 'Add New Farmer', 'List');
