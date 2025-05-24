@@ -14,7 +14,7 @@ import Alerts from './../pages/UiElements/Alerts';
 import Buttons from './../pages/UiElements/Buttons';
 import AddUserForm from './../pages/user/AddUserForm';
 import Farmers from './../pages/farmers';
-import Labor from './../pages/Labor';
+import Labor from './../pages/labor';
 import NewUserListTable from './../pages/user/NewUserListTable';
 import SupplierListTable from './../pages/superAdmin/SupplierList';
 import ColdStorageTable from './../pages/superAdmin/ColdStorageList';
