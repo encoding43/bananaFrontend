@@ -45,7 +45,7 @@ import AuditProfitAndLoss from '../pages/AuditPofitAndLoss';
 import LabourContractorSignUp from '../pages/labour_contractor_pages/labor_contractor_signup/LabourContractorSignUp';
 import Dashboard from '../pages/Dashboard/Dashboard';
 import LaborLedger from '../pages/labour_contractor_pages/labor_contractor_signup/labor_ledger/LaborLedger';
-import LaborPaymentDashboard from '../pages/labour_contractor_pages/labour_Payment/LaborContractorDashboard';
+import LaborPaymentDashboard from '../pages/labour_contractor_pages/labour_payment/LaborContractorDashboard';
 import AdddVendors from '../pages/AddVendors/Index';
 import AdddCommissionAgent from '../pages/AddCommissionAgents/Index';
 import VendorBill from '../pages/VendorBill';
