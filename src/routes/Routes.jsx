@@ -41,7 +41,7 @@ import CompanypartyLedger from '../pages/CompanypartyLedger';
 import TaskManagement from '../pages/taskManagement/Index';
 import VideoUploading from '../pages/videoUploading/Index';
 import TransactionsandBills from '../pages/transactionsAndbills';
-import AuditProfitAndLoss from '../pages/auditPofitAndLoss';
+import AuditProfitAndLoss from '../pages/AuditPofitAndLoss';
 import LabourContractorSignUp from '../pages/labour_contractor_pages/labor_contractor_signup/LabourContractorSignUp';
 import Dashboard from '../pages/Dashboard/Dashboard';
 import LaborLedger from '../pages/labour_contractor_pages/labor_contractor_signup/labor_ledger/LaborLedger';
