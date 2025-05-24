@@ -15,7 +15,7 @@ import { withPageGuard } from '../../utils/withPageGuard';
 import moment from 'moment';
 import WhatsAppComponent from '../../components/whatsApp/WhatsAppComponent';
 import AddPaymentModal from './AddPayment';
-import AddReceivingPaymentModal from './receivingPayment';
+import AddReceivingPaymentModal from './ReceivingPayment';
 import { useSelector } from 'react-redux';
 import { useCheckPermission } from '../../utils/useCheckPermission';
 
