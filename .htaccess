@@ -1,0 +1,7 @@
+# Enable mod_rewrite
+RewriteEngine On
+RewriteBase /bananaHarvesting/
+# Serve static files directly if exists
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /bananaHarvesting/index.html [QSA,L]
