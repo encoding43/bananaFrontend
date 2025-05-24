@@ -22,7 +22,7 @@ import { useCheckPermission } from '../../utils/useCheckPermission';
 import ViewMap from '../../components/viewMap/ViewMap';
 import ExportButtonContent from '../../utils/ExportButtonContent';
 
-const AdddFarmers = () => {
+const AddFarmers = () => {
   const navigate = useNavigate();
   const [openAddModal, setOpenAddModal] = React.useState(false);
   const [farmerdata, setFarmerData] = React.useState([]);
@@ -79,12 +79,11 @@ const AdddFarmers = () => {
         accessorKey: 'rowNumber',
         header: 'Sr. No',
         size: 60,
-        Cell: ({ row }) =>{
-          console.log("llllllllllllllllllllllllllllllllll" , row);
-          
-          return  row.index + 1 + pageState.pageIndex * pageState.pageSize
-        }
-         ,
+        Cell: ({ row }) => {
+          console.log('llllllllllllllllllllllllllllllllll', row);
+
+          return row.index + 1 + pageState.pageIndex * pageState.pageSize;
+        },
         enableColumnActions: false,
         enableSorting: false,
       },
@@ -128,23 +127,25 @@ const AdddFarmers = () => {
         enableColumnActions: false,
         enableSorting: true,
       },
-    
-      ...(checkDeletePermission ?  [
-        {
-          accessorKey: 'isBlocked',
-          header: 'Block',
-          size: 100,
-          enableColumnActions: false,
-          enableSorting: false,
-          Cell: ({ row }) => (
-            <Switch
-              checked={row?.original?.isBlocked}
-              onChange={() => SwitchhandleChange(row.original)}
-              inputProps={{ 'aria-label': 'controlled' }}
-            />
-          ),
-        },
-      ]:[]),
+
+      ...(checkDeletePermission
+        ? [
+            {
+              accessorKey: 'isBlocked',
+              header: 'Block',
+              size: 100,
+              enableColumnActions: false,
+              enableSorting: false,
+              Cell: ({ row }) => (
+                <Switch
+                  checked={row?.original?.isBlocked}
+                  onChange={() => SwitchhandleChange(row.original)}
+                  inputProps={{ 'aria-label': 'controlled' }}
+                />
+              ),
+            },
+          ]
+        : []),
       {
         accessorKey: 'actions',
         size: 100,
@@ -348,4 +349,4 @@ const AdddFarmers = () => {
   );
 };
 
-export default withPageGuard(AdddFarmers, 'Add New Farmer', 'List');
+export default withPageGuard(AddFarmers, 'Add New Farmer', 'List');
